@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'PartnerCondensedNormal';
+    src: url('partcn__.eot');
+    src: url('partcn__.eot') format('embedded-opentype'),
+         url('partcn__.woff') format('woff'),
+         url('partcn__.ttf') format('truetype'),
+         url('partcn__.svg#PartnerCondensedNormal') format('svg');
+}

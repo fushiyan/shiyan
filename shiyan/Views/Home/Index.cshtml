@@ -1,31 +1,408 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿<div class="content-block">
+    <div class="central-block">
+        <div class="page-head">
+            <h2>Home Page</h2>
+            <form action="?" method="get" class="user-searh">
+                <div class="form-item">
+                    <input type="text" class="form-text with-text" value="Last Name" name="last-name">
+                </div>
+                <div class="form-item">
+                    <input type="text" class="form-text with-text" value="First Name" name="first-name">
+                </div>
+                <input type="submit" class="form-submit" value="">
+            </form>
+        </div>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+        <div class="home-grid">
+            <div class="col col-1">
+                <div class="inner-col">
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+                    <div class="widget widget-green1" data-name="messages">
+                        <div class="title">
+                            <h5><a href="#">Messages</a></h5>
+                            <div class="info">
+                                <div class="left"><b>352</b> messages</div>
+                                <div class="count">3 new</div>
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="content-area resizeble" style="height:223px;">
+                                <div class="inner-content">
+                                    <div class="mail-widget">
+                                        <a href="#">
+                                            <img src="photos/photo_5.jpg" width="33" height="33">
+                                            <span class="theme">Additional Session request</span>
+                                            <span class="from">from Natalia Tiutiun (08/09/2013 20:05)</span>
+                                        </a>
+
+                                        <a href="#">
+                                            <img src="photos/photo_3.jpg" width="33" height="33">
+                                            <span class="theme">Additional Session request</span>
+                                            <span class="from">from Natalia Tiutiun (08/09/2013 20:05)</span>
+                                        </a>
+
+                                        <a href="#">
+                                            <img src="photos/photo_7.jpg" width="33" height="33">
+                                            <span class="theme">Additional Session request</span>
+                                            <span class="from">from Natalia Tiutiun (08/09/2013 20:05)</span>
+                                        </a>
+
+                                        <a href="#" class="read">
+                                            <img src="photos/photo_5.jpg" width="33" height="33">
+                                            <span class="theme">Additional Session request</span>
+                                            <span class="from">from Natalia Tiutiun (08/09/2013 20:05)</span>
+                                        </a>
+
+                                        <a href="#" class="read">
+                                            <img src="photos/photo_2.jpg" width="33" height="33">
+                                            <span class="theme">Additional Session request</span>
+                                            <span class="from">from Natalia Tiutiun (08/09/2013 20:05)</span>
+                                        </a>
+
+                                        <a href="#" class="read">
+                                            <img src="photos/photo_1.jpg" width="33" height="33">
+                                            <span class="theme">Additional Session request</span>
+                                            <span class="from">from Natalia Tiutiun (08/09/2013 20:05)</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="widget resizeble" data-name="calendar">
+                        <div class="title">
+                            <h5><a href="#">Calendar</a></h5>
+                            <div class="info">
+                                <a href="#">Add Event</a>
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="content-area resizeble" style="height:208px; border:none;">
+                                <div class="inner-content">
+                                    <table class="calnedar-tab">
+                                        <thead>
+                                            <tr><th colspan="7"><div class="head"><a href="#" class="prev">&larr;</a> March 2013 <a href="#" class="next">&rarr;</a></div></th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Su</th>
+                                                <th>Mo</th>
+                                                <th>Tu</th>
+                                                <th>We</th>
+                                                <th>Th</th>
+                                                <th>Fr</th>
+                                                <th>Sa</th>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-href="#">1</td>
+                                                <td data-href="#">2</td>
+                                                <td data-href="#">3</td>
+                                                <td data-href="#">4</td>
+                                                <td data-href="#">5</td>
+                                                <td data-href="#">6</td>
+                                                <td data-href="#">7</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-href="#">8</td>
+                                                <td data-href="#">9</td>
+                                                <td data-href="#">10</td>
+                                                <td data-href="#">11</td>
+                                                <td data-href="#">12</td>
+                                                <td data-href="#">13</td>
+                                                <td data-href="#">14</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-href="#">15</td>
+                                                <td data-href="#">16</td>
+                                                <td>17</td>
+                                                <td>18</td>
+                                                <td class="today">19</td>
+                                                <td>20</td>
+                                                <td>21</td>
+                                            </tr>
+                                            <tr>
+                                                <td>22</td>
+                                                <td>23</td>
+                                                <td>24</td>
+                                                <td>25</td>
+                                                <td>26</td>
+                                                <td>27</td>
+                                                <td>28</td>
+                                            </tr>
+                                            <tr>
+                                                <td>29</td>
+                                                <td>30</td>
+                                                <td>31</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col col-2">
+                <div class="inner-col">
+                    <div class="widget widget-pink" data-name="lesson-taught">
+                        <div class="title">
+                            <h5><a href="#">Lessons taught in current month</a></h5>
+                        </div>
+                        <div class="body">
+                            <div class="pie-chart">
+                                <script type="text/javascript">
+                                                var tutorsDataChart =  [
+                                                    { label: "Michiko Frachet <b>(14.7%)</b>, 158",  data: 14.7},
+                                                    { label: "Nicolina Katinakis <b>(12.9%)</b>, 138",  data: 12.9},
+                                                    { label: "Madi Lusier <b>(10.7%)</b>, 115",  data: 10.7},
+                                                    { label: "Annie-Eve Roberts <b>(9.4%)</b>, 101",  data: 9.4},
+                                                    { label: "Boian Yankov <b>(9.0%)</b>, 96",  data: 9.0},
+                                                    { label: "Jimmy Raimond <b>(8.9%)</b>, 96",  data: 8.9},
+                                                    { label: "Merilin Hudon <b>(8.8%)</b>, 95",  data: 8.8},
+                                                    { label: "Marie-Pierre Martin <b>(8.7%)</b>, 93",  data: 8.7},
+                                                    { label: "Marie-France Jean <b>(8.5%)</b>, 91",  data: 8.5},
+                                                    { label: "Linda Gordon <b>(8.3%)</b>, 89",  data: 8.3}
+                                                ];
+                                </script>
+                                <div class="chart-head">
+                                    <table style="width:100%;">
+                                        <tr>
+                                            <td style="font-weight:bold; text-align:center; font-weight:bold;">Top 10 Tutors</td>
+                                            <td style="width:190px">
+                                                <select name="groupby" class="form-select" style="width:85px">
+                                                    <option value="Clients">Clients</option>
+                                                    <option value="Tutors" selected>Tutors</option>
+                                                    <option value="Students">Students</option>
+                                                </select>
+
+                                                <select name="viewMonth" class="form-select" style="width:95px">
+
+                                                    <option value="7/01/2013">July</option>
+
+                                                    <option value="6/01/2013">June</option>
+
+                                                    <option value="5/01/2013">May</option>
+
+                                                    <option value="4/01/2013" selected="">April</option>
+
+                                                    <option value="3/01/2013">March</option>
+
+                                                    <option value="2/01/2013">February</option>
+
+                                                    <option value="1/01/2013">January</option>
+
+                                                    <option value="12/01/2012">December</option>
+
+                                                    <option value="11/01/2012">November</option>
+
+                                                    <option value="10/01/2012">October</option>
+
+                                                    <option value="9/01/2012">September</option>
+
+                                                    <option value="8/01/2012">August</option>
+
+                                                    <option value="7/01/2012">July</option>
+
+                                                </select>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="top-tutors" style="height:202px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="widget widget-green2" data-name="tutor-performance">
+                        <div class="title">
+                            <h5><a href="#">Tutors Performance</a></h5>
+                        </div>
+                        <div class="body">
+                            <script type="text/javascript">
+											var learnerDataChart = [ [[1, 25]], [[2, 30]], [[3, 32]], [[4, 40]], [[5, 35]], [[6, 50]], [[7, 60]], [[8, 63]], [[9, 70]], [[10, 65]], [[11, 55]], [[12, 70]]];
+											var learnerTicks =   [ [ 1, "Jan" ], [ 2, "Feb" ], [ 3, "Mar" ], [4, "Apr"], [5, "May"], [6, "Jun"], [7, "Jul"], [8, "Aug"], [9, "Sep"], [10, "Oct"], [11, "Nov"], [12, "Dec"] ];
+                            </script>
+                            <div id="learner-perfomance" class="content-area resizeble" style="height:208px">
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col col-3">
+                <div class="inner-col">
+
+                    <div class="widget widget-lilac" data-name="announcements">
+                        <div class="title">
+                            <h5><a href="#">Announcements</a></h5>
+                            <div class="info">
+                                <div class="announce-nav">
+                                    <a href="#" class="prev">&larr;</a>
+                                    <a href="#" class="play">&gt;</a>
+                                    <a href="#" class="pause">||</a>
+                                    <a href="#" class="next">&rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="content-area announce-area resizeble" style="height:223px;">
+                                <div class="inner-content">
+                                    <div class="announce-block">
+                                        <div class="announce" id="ann-1">
+                                            <p><b>Account Manager and Accounts</b></p>
+                                            <p>
+                                                Voici les noms des gestionnaires de comptes et leurs comptes.<br>
+                                                Here are the Account managers and their list of accounts.
+                                            </p>
+                                            <p>Lorger - lorger.geronimo@lrdgonline.com</p>
+                                            <p>BDC</p>
+                                            Canadian Heritage<br>
+                                            CBC<br>
+                                            CIC<br>
+                                            CRA<br>
+                                            Desjardins<br>
+                                            National Bank<br>
+                                            RCMP Atlantic<br>
+                                            Service Canada<br>
+                                            Veterans Affairs
+                                            <p>Natalia – Natalia.Tiutiun@lrdgonline.com</p>
+
+                                        </div>
+
+
+                                        <div class="announce" id="ann-2">
+                                            <p><b>Account Manager 2</b></p>
+                                            <p>BDC</p>
+                                            Canadian Heritage<br>
+                                            CBC<br>
+                                            CIC<br>
+                                            CRA<br>
+                                            Desjardins<br>
+                                            National Bank<br>
+                                            RCMP Atlantic<br>
+                                            Service Canada<br>
+                                            Veterans Affairs
+                                            <p>Natalia – Natalia.Tiutiun@lrdgonline.com</p>
+
+                                        </div>
+
+                                        <div class="announce" id="ann-3">
+                                            <p><b>Account 3</b></p>
+                                            <p>
+                                                Voici les noms des gestionnaires de comptes et leurs comptes.<br>
+                                                Here are the Account managers and their list of accounts.
+                                            </p>
+                                            National Bank<br>
+                                            RCMP Atlantic<br>
+                                            Service Canada<br>
+                                            Canadian Heritage<br>
+                                            CBC<br>
+                                            CIC<br>
+                                            CRA<br>
+                                            Desjardins<br>
+                                            Veterans Affairs
+                                            <p>Natalia – Natalia.Tiutiun@lrdgonline.com</p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="widget widget-yellow" data-name="manager-performance">
+                        <div class="title">
+                            <h5><a href="#">Account Managers Performance</a></h5>
+
+                        </div>
+                        <div class="body">
+                            <div class="content-area  resizeble" style="height:206px;">
+                                <div class="inner-content">
+                                    <table class="tab1 tab-acc-dist">
+                                        <tr>
+                                            <th>
+                                                Account<br>Manager
+                                            </th>
+                                            <th>
+                                                Active<br>Learners
+                                            </th>
+                                            <th>
+                                                Target<br>Hours
+                                            </th>
+                                            <th>
+                                                Hours<br>Done
+                                            </th>
+                                            <th>
+                                                Target<br>Hours
+                                            </th>
+                                            <th>
+                                                Hours<br>To Taget
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-align-left">Rana Salah</td>
+                                            <td>35</td>
+                                            <td>140.00</td>
+                                            <td>2.50</td>
+                                            <td>1.8%</td>
+                                            <td>137.50</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-align-left">Natalia Tiutiun</td>
+                                            <td>35</td>
+                                            <td>140.00</td>
+                                            <td>2.50</td>
+                                            <td>1.8%</td>
+                                            <td>137.50</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-align-left">Lorger Geronimo</td>
+                                            <td>35</td>
+                                            <td>140.00</td>
+                                            <td>2.50</td>
+                                            <td>1.8%</td>
+                                            <td>137.50</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-align-left"><strong>Total</strong></td>
+                                            <td><strong>105</strong></td>
+                                            <td><strong>420.00</strong></td>
+                                            <td><strong>7.50</strong></td>
+                                            <td><strong>5.4%</strong></td>
+                                            <td><strong>412.50</strong></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+
 </div>
