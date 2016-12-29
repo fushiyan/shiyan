@@ -1,0 +1,21 @@
+﻿@model IEnumerable<shiyan.Models.Gallery>
+@{
+    ViewBag.Title = "Photos";
+} 
+<div>
+    
+    @if (User.Identity.IsAuthenticated)
+    {
+        <button class="btn btn-default" id="add">Add</button> 
+        <button class="btn btn-default" id="edit">Edit</button>
+    } 
+@Html.Partial("~/Views/Shared/SliderPartial.cshtml", Model)
+</div>
+<script>
+ $('#add').click(function() {
+   window.location = "Create";
+ });
+ $('#edit').click(function () {
+     window.location = "index";
+ });
+</script>

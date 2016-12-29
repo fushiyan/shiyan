@@ -1,0 +1,20 @@
+﻿<ul id="slider" class="bxslider">
+        @foreach (var image in Model)
+        {   
+                <content>
+                    <img src="@Url.Content(image.ImagePath)" title="@image.Title" />
+                </content>  
+        }
+</ul>
+  
+    <script>
+        $(document).ready(function () {
+            $('#slider').bxSlider({
+                auto: true,
+                autoControls: true,
+                mode: 'fade',
+                captions: true
+            });
+            $('.bx.wrapper').width('100%');
+        });
+    </script> 

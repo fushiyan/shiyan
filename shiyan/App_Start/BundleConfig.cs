@@ -22,9 +22,12 @@ namespace shiyan
                         "~/js/jquery-ui.js",
                         "~/js/slimscroll.js",
                         "~/js/jquery.flot.js",
-                        "~/jquery.flot.resize.js",
-                        "~/jquery.flot.pie.resize.js"
+                        "~/js/jquery.flot.resize.js",
+                        "~/js/jquery.flot.pie.resize.js", 
+                        "~/js/jquery.flot.pie.resize.js" 
                         ));
+            bundles.Add(new ScriptBundle("~/bundles/slider").Include(
+                "~/js/jquery.bxslider.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",

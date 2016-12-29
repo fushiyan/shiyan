@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "AddImage";
+}
+
+<h2>AddImage</h2>
+@using (Html.BeginForm("Create", "Galleries", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<input type="file" name="ImagePath" />
+    <input type="text" name="Title" />
+    <input type="text" name="Description" />
+    <input type="submit" />
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

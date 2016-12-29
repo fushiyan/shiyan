@@ -82,6 +82,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -196,12 +198,31 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GalleriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Gallery.cs">
+      <DependentUpon>GalleryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GalleryModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GalleryModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GalleryModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GalleryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GalleryModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GalleryModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -210,9 +231,12 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\business-casual.css" />
     <Content Include="Content\ie7.css" />
     <Content Include="Content\ie8.css" />
     <Content Include="Content\images\animated-overlay.gif" />
+    <Content Include="Content\images\bx_loader.gif" />
+    <Content Include="Content\images\controls.png" />
     <Content Include="Content\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\images\ui-bg_flat_55_fbec88_40x100.png" />
     <Content Include="Content\images\ui-bg_glass_75_d0e5f5_1x400.png" />
@@ -229,10 +253,12 @@
     <Content Include="Content\images\ui-icons_d8e7f3_256x240.png" />
     <Content Include="Content\images\ui-icons_f9bd01_256x240.png" />
     <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\jquery.bxslider.css" />
     <Content Include="Content\PIE.htc" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\aller.svg" />
     <Content Include="fonts\armata.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\itckrist.svg" />
     <Content Include="fonts\partcn.css" />
     <Content Include="fonts\partcn.svg" />
@@ -279,6 +305,7 @@
     <Content Include="img\bg-top-panel-buttons.png" />
     <Content Include="img\bg-top-panel.png" />
     <Content Include="img\bg-user-bar.png" />
+    <Content Include="img\bg.jpg" />
     <Content Include="img\big-logo.png" />
     <Content Include="img\block-close.png" />
     <Content Include="img\block-open.png" />
@@ -354,6 +381,7 @@
     <Content Include="img\icon-logout.png" />
     <Content Include="img\icon-myprofile.png" />
     <Content Include="img\icon-reload.png" />
+    <Content Include="img\intro-pic.jpg" />
     <Content Include="img\learner-big-icon-selected.png" />
     <Content Include="img\learner-big-icon.png" />
     <Content Include="img\learner-icon.png" />
@@ -389,6 +417,7 @@
     <Content Include="img\paper_bag.png" />
     <Content Include="img\pdf-icon.png" />
     <Content Include="img\phone-icon.png" />
+    <Content Include="img\photo-icon.png" />
     <Content Include="img\plan-icon.png" />
     <Content Include="img\play-button.png" />
     <Content Include="img\popup-corn.png" />
@@ -408,6 +437,9 @@
     <Content Include="img\settings-icon-big.png" />
     <Content Include="img\settings-icon-selected.png" />
     <Content Include="img\settings-icon.png" />
+    <Content Include="img\slide-1.jpg" />
+    <Content Include="img\slide-2.jpg" />
+    <Content Include="img\slide-3.jpg" />
     <Content Include="img\slogan-en.png" />
     <Content Include="img\slogan-fr.png" />
     <Content Include="img\sticky.png" />
@@ -428,6 +460,8 @@
     <Content Include="js\excanvas.js" />
     <Content Include="js\html5shiv.js" />
     <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery.bxslider.js" />
+    <Content Include="js\jquery.bxslider.min.js" />
     <Content Include="js\jquery.cookie.js" />
     <Content Include="js\jquery.flot.js" />
     <Content Include="js\jquery.flot.pie.js" />
@@ -443,6 +477,16 @@
     <Content Include="js\jwplayer.js" />
     <Content Include="js\slimscroll.js" />
     <Content Include="js\ZeroClipboard.swf" />
+    <Content Include="Models\GalleryModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GalleryModel.edmx</DependentUpon>
+      <LastGenOutput>GalleryModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\GalleryModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GalleryModel.edmx</DependentUpon>
+      <LastGenOutput>GalleryModel.cs</LastGenOutput>
+    </Content>
     <Content Include="photos\photo_1.jpg" />
     <Content Include="photos\photo_10.jpg" />
     <Content Include="photos\photo_11.jpg" />
@@ -482,6 +526,17 @@
     <Content Include="fonts\partcn.otf" />
     <Content Include="fonts\partcn.ttf" />
     <Content Include="fonts\partcn.woff" />
+    <EntityDeploy Include="Models\GalleryModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GalleryModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\GalleryModel.edmx.diagram">
+      <DependentUpon>GalleryModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\helloquebeccenter.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -533,6 +588,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Galleries\Photos.cshtml" />
+    <Content Include="Views\Shared\SliderPartial.cshtml" />
+    <Content Include="Views\Shared\EditorTemplate\Gallery.cshtml" />
+    <Content Include="Views\Galleries\Create.cshtml" />
+    <Content Include="Views\Galleries\Delete.cshtml" />
+    <Content Include="Views\Galleries\Details.cshtml" />
+    <Content Include="Views\Galleries\Edit.cshtml" />
+    <Content Include="Views\Galleries\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -543,6 +606,9 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using shiyan.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,35 @@ namespace shiyan.Controllers
         {
             return View();
         }
+         
+       
+
+
+        public ActionResult DeleteImages() {
+            using (SMZEntities db = new SMZEntities()) {
+                return View(db.Galleries.ToList());
+            }
+        }
+
+        [HttpPost]
+        public ActionResult DeleteImages(IEnumerable<int> ImagesIds) { 
+            using (SMZEntities db = new Models.SMZEntities()) {
+                foreach (var id in ImagesIds)
+                {
+                   
+                    var image = db.Galleries.Single(s => s.Id == 4);
+                    string imgPath = Server.MapPath(image.ImagePath);
+                    db.Galleries.Remove(image);
+                    if (System.IO.File.Exists(imgPath))
+                      {
+                        System.IO.File.Delete(imgPath);
+                    } 
+                }
+                db.SaveChanges(); 
+            }
+            return RedirectToAction("DeleteImages");
+        }
+
 
         public ActionResult About()
         {
@@ -19,6 +49,8 @@ namespace shiyan.Controllers
 
             return View();
         }
+
+
 
         public ActionResult Contact()
         {
