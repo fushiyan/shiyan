@@ -437,6 +437,7 @@
     <Content Include="img\settings-icon-big.png" />
     <Content Include="img\settings-icon-selected.png" />
     <Content Include="img\settings-icon.png" />
+    <Content Include="img\slide-4.jpg" />
     <Content Include="img\slide-1.jpg" />
     <Content Include="img\slide-2.jpg" />
     <Content Include="img\slide-3.jpg" />
